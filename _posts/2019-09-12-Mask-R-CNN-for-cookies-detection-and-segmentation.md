@@ -1,9 +1,9 @@
 ---
 layout: posts
 title: "Mask R-CNN for Cookies Detection and Segmentation"
-toc: true
-toc_label: "Outline"
 ---
+- TOC
+{:toc}
 
 This is a tiny project to use Mask R-CNN for detecting two brands of cookies **"Lays"** and **"Doritos"**.  
 Most of the code is based on the implementation of [Mask R-CNN by matterport](https://github.com/matterport/Mask_RCNN) on Python 3, Keras, and TensorFlow. Where we modified is change the backbone network from ResNet-101 to ResNet-50 and the batch size from 2 to 1 image. This setting is will use 97~98% memory of NVIDIA RTX2060 6GB.  
@@ -70,7 +70,7 @@ python3 cookies.py train --dataset=/path/to/cookies/dataset --weights=imagenet -
 Here we use pre-trained model from imagenet is to let us not need to install some other packages to support with COCO.
 
 
-# Monitoring your training:
+# Monitoring your training
 You can not only use tensorboard to see the logs during training, but also can use the [inspect_cookies_model.ipynb](/notebook/inspect_cookies_model.ipynb) to see the effect of the current trained model, or [inspect_cookies_weights.ipynb](/notebook/inspect_cookies_weights.ipynb) to visualize the stats and distribution of the weights in current model.  
 Those files are set to run on CPU which can let you keep training on GPU while using this notebook. And it also provide step-by-step detection to see the detail on each stages in detecting with the current model.
 
