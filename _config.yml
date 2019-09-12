@@ -23,7 +23,7 @@ subtitle                 : "Machine Learning 的紀錄、實做與分享"  # sit
 name                     : "Ivan Y. W. Chiu"
 description              : "Machine Learning"
 url                      : "https://yuweichiu.github.io"  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/blog" # the subpath of your site, e.g. "/blog"
+baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "yuweichiu/yuweichiu.github.io"  # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.png"  # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/android-chrome-96x96.png"  # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
