@@ -1,14 +1,15 @@
 ---
 layout: posts
-title: Mask R-CNN for Cookies Detection and Segmentation
+title: "Mask R-CNN for Cookies Detection and Segmentation"
+toc: true
+toc_label: "Outline"
 ---
-{% include toc icon="cog" title="My Table of Contents" %}
 
 This is a tiny project to use Mask R-CNN for detecting two brands of cookies **"Lays"** and **"Doritos"**.  
 Most of the code is based on the implementation of [Mask R-CNN by matterport](https://github.com/matterport/Mask_RCNN) on Python 3, Keras, and TensorFlow. Where we modified is change the backbone network from ResNet-101 to ResNet-50 and the batch size from 2 to 1 image. This setting is will use 97~98% memory of NVIDIA RTX2060 6GB.  
 
-{% include figure image_path="/assets/images/detect_10509506623156.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
-![Instance Segmentation Sample](/assets/images/detect_10509506623156.jpg)
+![](/assets/images/detect_10509506623156.jpg)
+*Instance Segmentation Sample*
 
 The repository includes:
 * Source code of Mask R-CNN built on FPN and ResNet-50.
