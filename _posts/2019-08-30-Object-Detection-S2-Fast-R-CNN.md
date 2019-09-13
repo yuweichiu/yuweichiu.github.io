@@ -1,5 +1,5 @@
 ---
-title: "[Obeject Detection] S2: Fast R-CNN 簡介"
+title: "[Object Detection] S2: Fast R-CNN 簡介"
 header:
   teaser: /assets/images/fast-r-cnn-structure.png
 categories:

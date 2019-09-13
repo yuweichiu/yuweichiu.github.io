@@ -1,5 +1,5 @@
 ---
-title: "[Obeject Detection] S4: YOLO v1 簡介"
+title: "[Object Detection] S4: YOLO v1 簡介"
 header:
   teaser: /assets/images/yolov1_detect.png
 categories:

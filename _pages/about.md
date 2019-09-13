@@ -5,6 +5,7 @@ author_profile: true
 layout: single
 last_modified_at: 2019-09-13
 toc: true
+toc_label: "Outline"
 ---
 
 Just got the master degree in civil engineering from National Taiwan University in July, 2019. Professional with image processing, image-based hydrologic remote monitoring. A machine learning enthusiastic and experienced in programming with Python using Tensorflow and Keras. Landscape Photographer.  
@@ -40,7 +41,7 @@ Just got the master degree in civil engineering from National Taiwan University 
 [Github repo](https://github.com/yuweichiu/Cookies-Detections-Mask-R-CNN)  
 This is a tiny project to use Mask R-CNN for detecting two brands of cookies "Lays" and "Doritos". Most of the code is based on the implementation of Mask R-CNN by matterport on Python 3, Keras, and TensorFlow. Where we modified is change the backbone network from ResNet-101 to ResNet-50 and the batch size from 2 to 1 image. This setting is will use 97~98% memory of NVIDIA RTX2060 6GB.  
 
-### pyPIV - A Particle Image Velocimetry GUI software
+### pyPIV - A Particle Image Velocimetry GUI toolkit
 [Github repo](https://github.com/yuweichiu/pyPIV)  
 This is the project dealing with Particle Image Velocimetry based on two algorithm:
 1. Direct Cross Correlation (DCC)
@@ -48,7 +49,7 @@ This is the project dealing with Particle Image Velocimetry based on two algorit
 
 The GUI files built with **PyQt** helps user to modify the parameters in the algorithm more easily.
 
-**Note**: CNN method is not open to public. See the section **Master's Thesis** below.
+**Note**: CNN method is not open to public. See the section [Master's Thesis](#masters-thesis) below.
 
 
 ## Master's Thesis
@@ -57,7 +58,7 @@ The research made an effort on improving the river measurments results on the fi
 
 ------
 歡迎來到我基於Github pages建置的部落格，而樣式則採用Michael Rose所發表的Jekyll主題"[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)"。   
-Welcome to my blog built on Github pages. The themes is [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) designed, developed, and maintained by Michael Rose.  
+Welcome to my blog built on Github pages. The theme is [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) designed, developed, and maintained by Michael Rose.  
 
 ------
 本部落格主要語言為中文、英文。  
