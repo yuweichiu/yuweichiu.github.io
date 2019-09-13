@@ -12,7 +12,7 @@ tags:
 toc_label: "Outline"
 ---
 
-## 前言：
+## 前言
 R-CNN可以說是CNN有效應用於物件辨識領域中的一個重要里程碑。它應用region proposal的方法來將這些提案的區域送入CNN抽取特徵，以及後頭的分類、檢測網路中。
 在經典的物件辨識競賽PASCAL VOC的2010~2012年之間，競賽的成果發展趨緩。已往利用SIFT、HOG這類的影像識別方法僅僅符合生物初級的視覺機制，然而對於一個物體的識別與追蹤，是存在於更深層的神經傳導機制下的。自從CNN崛起以後，這篇研究的動機就是要接起deep learning和object detection之間的橋樑，且證實可以在辨識大賽中獲得前所未有的突破。研究目標可以分為兩項： 
 1. 與deep network搭配來對物體定位
@@ -75,7 +75,7 @@ R-CNN的backbone是AlexNet，並且以扣掉平均的227*227的RGB影像作為�
 在detection的部份，流程和前面一樣，只不過最後面的處理bbox時，要導入NMS(Non-maximum suppression)，來濾掉多餘的bbox，留下最好的。  
 
 
-## 總結：
+## 總結
 R-CNN可以分作3個階段看
 1. Region Proposals (selective search)
 2. Feature Extractor (AlexNet)
@@ -83,4 +83,6 @@ R-CNN可以分作3個階段看
 
 但是R-CNN分成這多階段的training，非常沒有效率，而且在training的時候，還要先把所有region proposals的feature vector都存到硬碟上，非常佔用硬體資源，也耗時許多。所以導致他的detection 表現只有47s/image的速度。也因此，後面出現了Fast R-CNN。  
 
-這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出，謝謝～
+這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出  
+如果喜歡這篇文章，記得在下面幫我按個Recommend↓  
+謝謝～

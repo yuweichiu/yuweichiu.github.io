@@ -13,7 +13,7 @@ tags:
 toc_label: "Outline"
 ---
 
-## 前言：
+## 前言
 回顧一下RCNN的問題點：  
 1. 訓練分太多階段
 2. 訓練消耗太多硬體資源和時間。因為每次要取BBox的feature vector，都需要將每一張影像的region proposals的執行一次CNN，並且將vector存到硬碟上。
@@ -25,7 +25,7 @@ toc_label: "Outline"
 [Fast R-CNN](http://openaccess.thecvf.com/content_iccv_2015/html/Girshick_Fast_R-CNN_ICCV_2015_paper.html)  
 
 
-## 演算法結構：
+## 演算法結構
 Fast-RCNN的架構如下圖所示：  
 
 [![](/assets/images/fast-r-cnn-structure.png)](https://jhui.github.io/2017/03/15/Fast-R-CNN-and-Faster-R-CNN/)
@@ -59,10 +59,10 @@ ROI可能是很多不同的長寬構成的框框，而VGGnet的FC層要以7x7的
 
 ![](/assets/images/fast-r-cnn-figure02.png)  
 
-### Detector:
+### Detector
 在後面的分類器，從FC層後分成兩支進行，第一支是分類器，由原本的SVM改成了FC層的softmax。特別注意到的是，分類的類別數量因為要讓背景獨立成一個類別，所以是K+1個。而第二支就是bbox regressor，則是沒什麼變化。  
 
-### Loss:
+### Loss
 因為分類器都變成了整個網路中的一部分，所以作者就設計了一套整合所有目標的loss function：  
 
 ![](/assets/images/fast-r-cnn-figure03.png)  
@@ -96,4 +96,6 @@ ROI可能是很多不同的長寬構成的框框，而VGGnet的FC層要以7x7的
 當然它還是有缺陷的。  
 其實測試的時間並沒有含括提出proposals的時間，所以納入了selective search在提出proposals的過程，其實表現還遠遠不足以應用。因此，後人提出了將region proposals的部份，也用NN一併解決，整合進網路中，也就誕生了Faster R-CNN。  
 
-以上是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出，謝謝！
+這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出  
+如果喜歡這篇文章，記得在下面幫我按個Recommend↓  
+謝謝～

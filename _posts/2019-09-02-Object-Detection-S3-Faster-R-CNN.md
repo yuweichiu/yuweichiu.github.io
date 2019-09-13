@@ -13,7 +13,7 @@ tags:
 toc_label: "Outline"
 ---
 
-## 前言：  
+## 前言  
 前一篇我們提到了Fast R-CNN的改進，包括了減少冗贅的特徵提取動作，將ROI映射到feature maps上，並用ROI pooling 統一維度等等。但是為了迎來更快的偵測速度，在Proposals上的處理也需要納入整個模式的NN之中，一起用convoultion來解決。  
 於是Faster R-CNN就此成型，它運用Region Proposals Network (RPN)搭配anchor box的設計，如同它論文的標題一樣 "Towards Real-Time Object Detection"，偵測速度來到了0.2s/image(相當於fps=5)的速度，雖然還不足以稱為real time，但是確實往這條路邁進了一大步。  
 
@@ -21,7 +21,7 @@ toc_label: "Outline"
 [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://arxiv.org/abs/1506.01497)  
 
 
-## 演算法架構：
+## 演算法架構
 首先來看論文裡面的一張圖：  
 
 ![](/assets/images/faster-r-cnn-paper01.png)  
@@ -56,7 +56,7 @@ toc_label: "Outline"
 
 有了這前300個anchor (如圖中橘框)，我們就可以到For offsets上，去找他們所對應的offsets量，帶回來修正anchor本身，成為最終的要提出來的300個proposals(如圖中紅框)。後續的工作，就和Fast R-CNN一樣了。  
 
-### RPN Loss Function:
+### RPN Loss Function
 為了訓練RPN，作者也提出一套供RPN訓練的損失函數：  
 
 ![](/assets/images/faster-r-cnn-paper03.png)  
@@ -69,7 +69,7 @@ toc_label: "Outline"
 Anchor會被RPN中的上路，以「有無物體」的分類器評估機率，所以這裡的目標就是有物體(\\(p^{* }\\)=1)、沒物體(\\(p^{* }\\)=0)來計算\\(L_{cls}\\)。而下路的部分則是計算offsets ，只有positive sample會對這裡的\\(L_{reg}\\)貢獻！  
 
 
-## 結論：
+## 結論
 透過上面所說的這些設計，Faster R-CNN把原先獨立處理proposals的部分也整合進了網路架構中，且也用全卷積網路處理，搭配不同尺度和比例的anchor予以proposals的預測。這整個流程的整併，讓Faster R-CNN的速度也出現明顯的提昇，且mAP的表現並沒有降低，反而讓表現又提升了。  
 
 當然，雖然Faster R-CNN算是在two-stage的物件偵測模型出人頭地，但是一樣有著不夠好的地方：  
@@ -77,4 +77,7 @@ Anchor會被RPN中的上路，以「有無物體」的分類器評估機率，�
 2. 網路架構越來越大，對於計算設備和記憶體的需求也越來越高。除了限制了應用層面的硬體要求以外，偵測速度5fps距離real time的願景還有些差距要克服。
 3. 整體架構的複雜度比one-stage 的模型複雜許多，較難理解，且運行速度也差很多。  
 
-R-CNN系列的分享到這裡先告一個段落，後面我會開始介紹one-stage 上的發展。以上是我對於這些論文的理解，如果有錯也請大家多多指教～
+R-CNN系列的分享到這裡先告一個段落，後面我會開始介紹one-stage 上的發展。  
+這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出  
+如果喜歡這篇文章，記得在下面幫我按個Recommend↓  
+謝謝～
