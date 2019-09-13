@@ -1,19 +1,19 @@
 ---
-title: "[Object Detection] S1: RCNN 簡介"
+title: "[Object Detection] S1: R-CNN 簡介"
 header:
-  teaser: /assets/images/2019-06-21 18-28-31 的螢幕擷圖.png
+  teaser: /assets/images/rcnn_paper01.png
 categories:
   - object detection
   - deep learning
 tags:
-  - RCNN
+  - R-CNN
   - region proposals
   - selective search
 toc_label: "Outline"
 ---
 
 ## 前言：
-RCNN可以說是CNN有效應用於物件辨識領域中的一個重要里程碑。它應用region proposal的方法來將這些提案的區域送入CNN抽取特徵，以及後頭的分類、檢測網路中。
+R-CNN可以說是CNN有效應用於物件辨識領域中的一個重要里程碑。它應用region proposal的方法來將這些提案的區域送入CNN抽取特徵，以及後頭的分類、檢測網路中。
 在經典的物件辨識競賽PASCAL VOC的2010~2012年之間，競賽的成果發展趨緩。已往利用SIFT、HOG這類的影像識別方法僅僅符合生物初級的視覺機制，然而對於一個物體的識別與追蹤，是存在於更深層的神經傳導機制下的。自從CNN崛起以後，這篇研究的動機就是要接起deep learning和object detection之間的橋樑，且證實可以在辨識大賽中獲得前所未有的突破。研究目標可以分為兩項： 
 1. 與deep network搭配來對物體定位
 2. 利用少量有標記之資料即可訓練的高彈性模型  
@@ -32,7 +32,7 @@ RCNN可以說是CNN有效應用於物件辨識領域中的一個重要里程碑�
 
 
 ## 演算法架構
-下圖是論文中所給出的演算架構。簡單來說，RCNN的概略步驟為：
+下圖是論文中所給出的演算架構。簡單來說，R-CNN的概略步驟為：
 1. 在輸入圖片上，以selective search先取出約2千個region proposals
 2. 將這些region利用CNN計算出他們的feature vector
 3. 將其各自的feature vector再丟入category-specific linear SVM中去分類
@@ -41,12 +41,12 @@ RCNN可以說是CNN有效應用於物件辨識領域中的一個重要里程碑�
 ![](/assets/images/rcnn_paper01.png)  
 
 ### Region Proposals - Selective search
-Selective Search 講起來又可以寫一篇，不過這邊還是簡單提一下他在幹麻。簡單說，這套演算法會先計算影像中所有臨域之間的相似性，然後把相似性高的區域給合併起來，再繼續計算區域和區域之間的相似性，視需要看在什麼階段停止合併。在RCNN中，會提出2000個proposals來進入後續計算。
+Selective Search 講起來又可以寫一篇，不過這邊還是簡單提一下他在幹麻。簡單說，這套演算法會先計算影像中所有臨域之間的相似性，然後把相似性高的區域給合併起來，再繼續計算區域和區域之間的相似性，視需要看在什麼階段停止合併。在R-CNN中，會提出2000個proposals來進入後續計算。
 ![](/assets/images/sliding-window_paper.png)  
 
 ### Feature Extractor (Backbone Network)
-RCNN的backbone是AlexNet，並且以扣掉平均的227*227的RGB影像作為輸入，將最後獲得的4096維的feature vector送入後面的detector中。
-而RCNN的其中一個重點就在，他是使用已經在ImageNet上pre-trained的AlexNet，在轉移到domain的應用上。他們發現，因為ImageNet不管是影像、類別的數量都很豐富，所以在上面pre-train的model，基本上已經可以對大部分的自然物體做出很好的特徵提取，所以在轉移到domain的應用上時，其實不用再重新訓練backbone network，而是去訓練後面的detector就可以讓通常很少量的domain影像依然可以獲得很好的結果。
+R-CNN的backbone是AlexNet，並且以扣掉平均的227*227的RGB影像作為輸入，將最後獲得的4096維的feature vector送入後面的detector中。
+而R-CNN的其中一個重點就在，他是使用已經在ImageNet上pre-trained的AlexNet，在轉移到domain的應用上。他們發現，因為ImageNet不管是影像、類別的數量都很豐富，所以在上面pre-train的model，基本上已經可以對大部分的自然物體做出很好的特徵提取，所以在轉移到domain的應用上時，其實不用再重新訓練backbone network，而是去訓練後面的detector就可以讓通常很少量的domain影像依然可以獲得很好的結果。
 而在selective search 給出proposals後，在這裡會先設定一個IoU的閥值(0.5)，來將每次的mini-batch的128筆資料中，將proposals區分成32 positive、96 negative兩種類型。
 
 ### Class Detector - SVM
@@ -76,11 +76,11 @@ RCNN的backbone是AlexNet，並且以扣掉平均的227*227的RGB影像作為輸
 
 
 ## 總結：
-RCNN可以分作3個階段看
+R-CNN可以分作3個階段看
 1. Region Proposals (selective search)
 2. Feature Extractor (AlexNet)
 3. Detector (SVM classifier, bbox regressor)  
 
-但是RCNN分成這多階段的training，非常沒有效率，而且在training的時候，還要先把所有region proposals的feature vector都存到硬碟上，非常佔用硬體資源，也耗時許多。所以導致他的detection 表現只有47s/image的速度。也因此，後面出現了Fast-RCNN。  
+但是R-CNN分成這多階段的training，非常沒有效率，而且在training的時候，還要先把所有region proposals的feature vector都存到硬碟上，非常佔用硬體資源，也耗時許多。所以導致他的detection 表現只有47s/image的速度。也因此，後面出現了Fast R-CNN。  
 
 這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出，謝謝～
