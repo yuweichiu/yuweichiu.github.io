@@ -21,7 +21,7 @@ Just got the master degree in civil engineering from National Taiwan University 
 - **Version Control**: Git.  
 
 ### Data Science
-- **Libary**: pandas, matplotlib.  
+- **Library**: pandas, matplotlib.  
 - **Statistic**: ANOVA, Regression, Uncertainty analysis, Reliability analysis, Time series, Kriging method.  
 
 ### Civil Engineering  
