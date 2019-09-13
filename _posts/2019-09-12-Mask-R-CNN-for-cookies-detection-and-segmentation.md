@@ -1,6 +1,8 @@
 ---
 title: "Mask R-CNN for Cookies Detection and Segmentation"
 toc_label: "Outline"
+header:
+  teaser: /assets/images/detect_10509506623156.jpg
 ---
 
 This is a tiny project to use Mask R-CNN for detecting two brands of cookies **"Lays"** and **"Doritos"**.  

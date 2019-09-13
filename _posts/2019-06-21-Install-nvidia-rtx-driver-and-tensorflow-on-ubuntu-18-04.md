@@ -1,23 +1,34 @@
 ---
 title: "在Ubuntu 18.04 中安裝NVIDIA RTX系列顯示卡驅動程式與Tensorflow"
+header:
+  teaser: /assets/images/2019-06-21 18-28-31 的螢幕擷圖.png
+categories:
+  - installation
+  - ubuntu
+tags:
+  - NVIDIA 
+  - driver
+  - Tensorflow
+  - CUDA
 toc_label: "Outline"
 ---
 
 > 爬了一堆文，每一篇都有收穫！但是我實際用全新的Ubuntu 18.04，照著reference的文章來試試看時，卻還是不斷踩坑QQ。還好不斷努力之下終於試出一整套完整流程可以把這些事完成，在這邊做個紀錄！
 
-# 軟硬體
-------
+## 軟硬體
+### 硬體
 * 裝置：MSI GE75 9SE
-* GPU：Nvidia RTX 2060
-* 軟體需求：
+* GPU：Nvidia RTX 2060  
+
+### 軟體需求：
 * gcc
 * make
 * NVIDIA Driver
 * CUDA 10.0
 * cuDNN 7.6.0  
 
-# Step 0. 基本軟體準備
-------
+
+## Step 0. 基本軟體準備
 去BIOS中把安全開機的選項關閉！  
 而如果你的ubuntu是全新的  
 記得先安裝gcc, make套件  
@@ -26,8 +37,8 @@ sudo apt install gcc
 sudo apt install make
 ```  
 
-# Step 1. 安裝NVIDIA Driver
-------
+
+## Step 1. 安裝NVIDIA Driver
 就在我一直嘗試用.run檔來安裝nvidia驅動不斷失敗然後重裝系統好幾次到懷疑人生之後，在nvidia的討論區找到了一篇留言，它說：  
 > 乖乖用ppa去抓ubuntu線上套件庫上有發行的NVIDIA驅動。  
 
@@ -65,8 +76,8 @@ nvidia-settings
 
 如果都成功的話，恭喜你完成我遇到最艱難的一步！！！  
 
-# Step 2. 安裝CUDA
-------
+
+## Step 2. 安裝CUDA
 到NVIDIA官網上下載對應版本的CUDA，CUDA的版本會根據tensorflow-gpu所對應的支援版本有所差異，而tensorflow-gpu 1.13.1的版本只支援到CUDA-10.0，所以本文使用10.0板，[官網連結](https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=deblocal)在此。  
 
 ![](/assets/images/2019-06-21 10-50-10 的螢幕擷圖.png)  
@@ -110,8 +121,8 @@ Cuda compilation tools, release 10.0, V10.0.130
 ```
 到此，CUDA的安裝就完成了！  
 
-# Step 3. 安裝cuDNN 相應版本
-------
+
+## Step 3. 安裝cuDNN 相應版本
 到[這個網址](https://developer.nvidia.com/rdp/cudnn-download)登入後才可找尋對應版本進行下載。注意到，一定要下載CUDA對應版本得cuDNN，我們這邊既然使用CUDA 10.0，就下載有標記CUDA 10.0的cuDNN。選擇for Linux的下載包下載tar檔案：  
 
 ![](/assets/images/2019-06-21 10-55-13 的螢幕擷圖.png)  
@@ -128,8 +139,8 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 ```
 至此，使用tensorflow-gpu的前製作業已全部完成，接著就來安裝它吧！   
 
-# Step 4. 安裝tensorflow-gpu==1.13.1
-------
+
+## Step 4. 安裝tensorflow-gpu==1.13.1
 ※如果有虛擬環境的人，記得先激活虛擬環境再開始安裝！  
 我們利用pip來安裝即可：
 ```
@@ -137,8 +148,8 @@ pip3 install tensorflow-gpu==1.13.1
 ```
 如果是用Anaconda的朋友，只好在這邊轉去其他厲害的前輩他們更好的教學文，只要版本對了，應該照著操作都不會有問題！  
 
-# Step 5. 測試
-------
+
+## Step 5. 測試
 最後，實際來run看看tensorflow，測時一下是不是安裝完成了！
 ```
 python
@@ -154,6 +165,30 @@ with tf.Session() as sess:
 到這裡，這篇紀錄文章就告一個段落了！   
 下面的附錄有再紀錄我途中遇到的問題，如果有遇到一樣的朋友，希望能對你有幫助！  
 
-# 附錄
-------
+
+## 附錄
 ※執行你的DNN程式時，若發生明明顯卡記憶體足夠，而cudnn啟動失敗，錯誤訊息如下：
+```
+Could not create cudnn handle: CUDNN_STATUS_INTERNAL_ERROR
+```
+試試看手動設定允許增加使用GPU記憶體，在你的程式碼中加入下面的設定：
+```
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+session = tf.Session(config=config, …)
+```
+※如果裝錯CUDA版本如何移除：
+```
+sudo apt-get  --purge remove cuda-X.Y
+sudo apt autoremove
+sudo apt update
+```
+
+
+## Reference
+[How to install Nvidia drivers and cuda-10.0 for RTX 2080 Ti GPU on ubuntu-16.04/18.04](https://medium.com/@avinchintha/how-to-install-nvidia-drivers-and-cuda-10-0-for-rtx-2080-ti-gpu-on-ubuntu-16-04-18-04-ce32e4edf1c0?source=post_page-----6eb58a5da818----------------------)  
+
+[Ubuntu 搭建深度學習開發環境 RTX 2080 + CUDA 10.0+cuDNN 7.4 + TensorFlow GPU r1.12 + nVIDIA docker](https://hackmd.io/@kcchien/BJzHPQdSN?type=view&source=post_page-----6eb58a5da818----------------------)  
+
+[Using GPUs,TensorFlow Core,TensorFlow](https://www.tensorflow.org/guide/using_gpu?hl=zh_cn&source=post_page-----6eb58a5da818----------------------)  
+
