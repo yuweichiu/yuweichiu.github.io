@@ -12,6 +12,7 @@ Just got the master degree in civil engineering from National Taiwan University 
 
 ## Quick Facts
 - **Programming Languages**: Python, MATLAB, SQL.  
+- **GUI**: PyQt
 
 ### Machine Learning
 - **Frameworks**: Tensorflow, Keras.  
@@ -39,7 +40,7 @@ Just got the master degree in civil engineering from National Taiwan University 
 ## Projects
 ### Mask R-CNN for Cookies Detection and Segmentation
 [Github repo](https://github.com/yuweichiu/Cookies-Detections-Mask-R-CNN)  
-This is a tiny project to use Mask R-CNN for detecting two brands of cookies "Lays" and "Doritos". Most of the code is based on the implementation of Mask R-CNN by matterport on Python 3, Keras, and TensorFlow. Where we modified is change the backbone network from ResNet-101 to ResNet-50 and the batch size from 2 to 1 image. This setting is will use 97~98% memory of NVIDIA RTX2060 6GB.  
+This is a tiny project to use Mask R-CNN for detecting two brands of cookies "Lays" and "Doritos". Most of the code is based on the implementation of Mask R-CNN by matterport on Python 3, Keras, and TensorFlow. Where we modified is change the backbone network from ResNet-101 to ResNet-50 and the batch size from 2 to 1 image. This setting will use 97~98% memory of NVIDIA RTX2060 6GB.  
 
 ### pyPIV - A Particle Image Velocimetry GUI toolkit
 [Github repo](https://github.com/yuweichiu/pyPIV)  
