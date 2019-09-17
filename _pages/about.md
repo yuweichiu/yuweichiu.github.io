@@ -8,7 +8,8 @@ toc: true
 toc_label: "Outline"
 ---
 
-Just got the master degree in civil engineering from National Taiwan University in July, 2019. Professional with image processing, image-based hydrologic remote monitoring. A machine learning enthusiastic and experienced in programming with Python using Tensorflow and Keras. Landscape Photographer.  
+Just got the master degree in civil engineering from National Taiwan University in July, 2019. Professional with image processing, image-based hydrologic remote monitoring. A machine learning enthusiastic and experienced in programming with Python using Tensorflow and Keras.  
+Landscape Photographer.  
 
 ## Quick Facts
 - **Programming Languages**: Python, MATLAB, SQL.  
