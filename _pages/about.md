@@ -40,11 +40,11 @@ Landscape Photographer.
 
 ## Projects
 ### Mask R-CNN for Cookies Detection and Segmentation
-[Github repo](https://github.com/yuweichiu/Cookies-Detections-Mask-R-CNN) | [Post](https://yuweichiu.github.io/Mask-R-CNN-for-cookies-detection-and-segmentation/)  
+[GitHub repo](https://github.com/yuweichiu/Cookies-Detections-Mask-R-CNN) | [Post](https://yuweichiu.github.io/Mask-R-CNN-for-cookies-detection-and-segmentation/)  
 This is a tiny project to use Mask R-CNN for detecting two brands of cookies "Lays" and "Doritos". Most of the code is based on the implementation of Mask R-CNN by matterport on Python 3, Keras, and TensorFlow. What we modified is changing the backbone network from ResNet-101 to ResNet-50 and the batch size from 2 to 1 image. This setting will use 97~98% memory of NVIDIA RTX2060 6GB.  
 
 ### pyPIV - A Particle Image Velocimetry GUI toolkit
-[Github repo](https://github.com/yuweichiu/pyPIV)  
+[GitHub repo](https://github.com/yuweichiu/pyPIV)  
 This is the project dealing with Particle Image Velocimetry based on two algorithm:
 1. Direct Cross Correlation (DCC)
 2. Convolutional Neural Network (CNN)  
@@ -59,8 +59,8 @@ The GUI files built with **PyQt** helps user to modify the parameters in the alg
 The research made an effort on improving the river measurments results on the field by conventional LSPIV technique. We implement a tiny self-build CNN model to replace the direct cross-correlation algorithm (DCC) in the conventional one. We found out that CNN-based LSPIV can keep the decrease of performance below 1% which is 18% and much more unsteady by DCC-based under the noise of illumination. The method we proposed is robust and can give an excellent velocity field with stability and accuracy then DCC gives.  
 
 ------
-歡迎來到我基於Github pages建置的部落格，而樣式則採用Michael Rose所發表的Jekyll主題"[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)"。   
-Welcome to my blog built on Github pages. The theme is [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) designed, developed, and maintained by Michael Rose.  
+歡迎來到我基於GitHub pages建置的部落格，而主題樣式則採用Michael Rose所發表的Jekyll主題"[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)"。   
+Welcome to my blog built on GitHub pages. The theme is [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) designed, developed, and maintained by Michael Rose.  
 
 ------
 本部落格主要語言為中文、英文。  
