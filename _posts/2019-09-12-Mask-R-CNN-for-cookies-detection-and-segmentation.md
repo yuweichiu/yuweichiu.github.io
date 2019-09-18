@@ -19,7 +19,7 @@ The repository includes:
 * Jupyter notebooks to visualize the detection pipeline at every step
 * Example of training on your own dataset
 
-If you just want to try the detection, you can download my trained model [here](https://drive.google.com/file/d/18BOn-qlodw1oebFRQk5P0ZHlcc83jHMt/view?usp=sharing) and jump to **Detection** part. 
+If you just want to try the detection, you can download my trained model [here](https://drive.google.com/file/d/18BOn-qlodw1oebFRQk5P0ZHlcc83jHMt/view?usp=sharing) and jump to [Detection](#detection) part. 
 
 
 # Training your dataset
