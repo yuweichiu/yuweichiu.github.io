@@ -1,7 +1,7 @@
 ---
 title: "[Object Detection] S5: YOLO v2 簡介"
 header:
-  teaser: /assets/images/yolov2_anchor.png
+  teaser: /assets/images/.png
 categories:
   - object detection
   - deep learning
@@ -30,7 +30,7 @@ YOLO v1 用非常直覺的方式設計了網路的運作，讓網路從輸出到
 *Darknet-19*
 {: .text-center}
 
-很明顯可以看到，darknet-19的設計主要的參考依據就是VGG-16，因為VGG-16其實相當好架設，也非常有效。不過最大的缺點就是最後的兩層全連階層使得運算的參數量過高。所以darknet-19的設計又參考了Googlenet和Network In Network的設計，運用1*1的卷積和全域平均池化，來取代掉原本分類層的設計，讓參數的使用量只需原本VGG-16的0.28倍。  
+很明顯可以看到，darknet-19的設計主要的參考依據就是VGG-16，因為VGG-16其實相當好架設，也非常有效。不過最大的缺點就是最後的兩層全連階層使得運算的參數量過高。所以darknet-19的設計又參考了Googlenet和Network In Network的設計，運用1×1的卷積和全域平均池化，來取代掉原本分類層的設計，讓參數的使用量只需原本VGG-16的0.28倍。  
 與此同時，darknet-19也引入了batch normalization的設計。因為隨著網路的加深，內部參數的統計量在每一層的傳遞中一直改變而越來越難訓練。因此加入batch normalization除了穩定並加速深層網路的訓練，同時也起到了regularization的效果。  
 
 ### Anchor  
@@ -55,11 +55,11 @@ YOLO v1 用非常直覺的方式設計了網路的運作，讓網路從輸出到
 
 ![feature map 說明](/assets/images/yolov2_feature_map.png)  
 
-也就是說，YOLO v2中倒數第二個feature map是26x26x512，經過pooling後就變成13x13x512，並不是就這樣結束了，而是把原本26x26x512拆成4份，變成13x13x(512x4)，並且接在13x13的feature map，如此就將兩種不同尺度的feature map都考慮到了
+也就是說，YOLO v2中倒數第二個feature map是26×26×512，經過pooling後就變成13×13×512，並不是就這樣結束了，而是把原本26×26×512拆成4份，變成13×13×(512×4)，並且接在13×13的feature map，如此就將兩種不同尺度的feature map都考慮到了
 
 
 ## 結論  
-以上是YOLO v2在網路設計部份的改進，考量了anchor的設計之後，以VOC資料集為例，anchor有5種，每個邊界框有4個偏移量和1個置信值(\\(t_x\\), \\(t_y\\), \\(t_w\\), \\(t_h\\), \\(t_c\\))，加上各自都有對應到20個類別，所以v2的輸出維度就是13x13x5x(5+20)。  
+以上是YOLO v2在網路設計部份的改進，考量了anchor的設計之後，以VOC資料集為例，anchor有5種，每個邊界框有4個偏移量和1個置信值(\\(t_x\\), \\(t_y\\), \\(t_w\\), \\(t_h\\), \\(t_c\\))，加上各自都有對應到20個類別，所以v2的輸出維度就是**13×13×5×(5+20)**。  
 雖然論文當中還有提到一些更細節再training上的方法，例如multi-scale、world tree的訓練、但這邊並不難理解就不再提。v2 加上了anchor的設計並且調適成適合one stage模型的方式，除了在速度上最快可以來到60 fps以上，當時真的是非常驚人的結果。不過依然存在著缺陷是還是考慮太少尺度的feature map來做偵測， 因此如果將這部分也考慮了進去，對於影像中各個大小的物體就能以合適的尺度去做偵測。這部分就是第3代的YOLO v3。  
 這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出  
 如果喜歡這篇文章，記得在下面幫我按個Recommend↓  
