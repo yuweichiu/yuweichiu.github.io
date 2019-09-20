@@ -136,6 +136,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/ivanchiu202a89181/"
+    - label: "Medium"
+      icon: "fab fa-medium"
+      url: "https://medium.com/@ywchiu84021121"
 
 # Site Footer
 footer:
