@@ -18,18 +18,26 @@ toc_label: "Outline"
 
 
 ## 演算法架構  
-作為one-stage模型，SSD以VGG-16為整個模型的主幹，在不同尺度的feature maps下進行辨識的工作。所以這次我會分做default box的部分和辨識兩部分來探討。
+作為one-stage模型，SSD以VGG-16為整個模型的主幹，在不同尺度的feature maps下進行辨識的工作，這樣的機制被稱為pyramidal feature hierarchy。整個網路架構如下圖所示
+![SSD stucture](/assets/images/SSD_structure.png)
+*SSD overview*  
+{: .text-center}  
 
-### Backbone
+從VGG-16的conv4_3之後，以38x38x512開始，每次降維之後的feature maps都會用來做detection用，就像圖中的分支所示。每一個支線，都會有各自的detection和classifier. 在SSD中，共有6條支線來處理不同尺度。隨著維度的降低，所處理的物體在影像中所佔有的比例是由小到大。  
+接著，就是如何將這些支線用來處理邊界框的問題了
 
-![Darknet-19網路架構圖](/assets/images/yolov2_darknet19.png)  
-*Darknet-19*
+### Default box  
+SSD中的default box就如論文中的圖中所示：
+
+![SSD default box](/assets/images/SSD_default_box.png)  
+*default box*
 {: .text-center}
 
+看起來就和anchor非常像。SSD設定了不同的default box的比例。以圖中為例，比例就有三種。而如果你看到*SSD overview*這張圖，就可以發現每個階段的比例有4, 6, 6, 6, 4, 4種。你可以針對想辨識的物體類型給予不同數量的比例。SDD在中間幾個feature map都給了6種比例來辨識，就是因為對於一般的物體在影像中的占比會是以中間這三層的尺度最為多數。
 
-### Anchor  
+### Detector  
 
-### Feature map   
+### Training   
 
 ## 結論  
 
