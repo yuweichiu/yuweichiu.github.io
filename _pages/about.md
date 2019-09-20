@@ -23,11 +23,11 @@ Landscape Photographer.
 - **Version Control**: Git.  
 
 ### Data Science
-- **Library**: pandas, matplotlib.  
+- **Library**: numpy, pandas, scipy, matplotlib.  
 - **Statistic**: ANOVA, Regression, Uncertainty analysis, Reliability analysis, Time series, Kriging method.  
 
 ### Civil Engineering  
-- **Knowledge**: Fluid Mechanics, Open Channel Flow.
+- **Knowledge**: Fluid Mechanics, Open Channel Flow, Hydrology.
 - **Numerical Model**: HEC-HMS, HEC-RAS, SWMM.
 - **GIS**: Arc-GIS, QGIS, UAV, Agi PhotoScan 3D Terrain Reconstruction.
 - **Construction Management**: MS Project. 
