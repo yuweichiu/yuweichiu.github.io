@@ -1,7 +1,7 @@
 ---
 title: "[Object Detection] S5: YOLO v2 簡介"
 header:
-  teaser: /assets/images/.png
+  teaser: /assets/images/yolov2_anchor.png
 categories:
   - object detection
   - deep learning
@@ -55,7 +55,7 @@ YOLO v1 用非常直覺的方式設計了網路的運作，讓網路從輸出到
 
 ![feature map 說明](/assets/images/yolov2_feature_map.png)  
 
-也就是說，YOLO v2中倒數第二個feature map是26×26×512，經過pooling後就變成13×13×512，並不是就這樣結束了，而是把原本26×26×512拆成4份，變成13×13×(512×4)，並且接在13×13的feature map，如此就將兩種不同尺度的feature map都考慮到了
+也就是說，YOLO v2中倒數第二個feature map是26×26×512，經過pooling後就變成13×13×512，並不是就這樣結束了，而是把原本26×26×512拆成4份，變成13×13×(512×4)，並且接在13×13的feature map，如此就將兩種不同尺度的feature map都考慮到了。
 
 
 ## 結論  
@@ -64,18 +64,3 @@ YOLO v1 用非常直覺的方式設計了網路的運作，讓網路從輸出到
 這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出  
 如果喜歡這篇文章，記得在下面幫我按個Recommend↓  
 謝謝～
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

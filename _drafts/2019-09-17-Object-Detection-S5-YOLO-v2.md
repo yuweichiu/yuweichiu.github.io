@@ -55,7 +55,7 @@ YOLO v1 用非常直覺的方式設計了網路的運作，讓網路從輸出到
 
 ![feature map 說明](/assets/images/yolov2_feature_map.png)  
 
-也就是說，YOLO v2中倒數第二個feature map是26×26×512，經過pooling後就變成13×13×512，並不是就這樣結束了，而是把原本26×26×512拆成4份，變成13×13×(512×4)，並且接在13×13的feature map，如此就將兩種不同尺度的feature map都考慮到了
+也就是說，YOLO v2中倒數第二個feature map是26×26×512，經過pooling後就變成13×13×512，並不是就這樣結束了，而是把原本26×26×512拆成4份，變成13×13×(512×4)，並且接在13×13的feature map，如此就將兩種不同尺度的feature map都考慮到了。
 
 
 ## 結論  
