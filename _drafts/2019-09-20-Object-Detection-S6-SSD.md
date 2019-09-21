@@ -36,6 +36,22 @@ SSD中的default box就如論文中的圖中所示：
 看起來就和anchor非常像。SSD設定了不同的default box的比例。以圖中為例，比例就有三種。而如果你看到*SSD overview*這張圖，就可以發現每個階段的比例有4, 6, 6, 6, 4, 4種。你可以針對想辨識的物體類型給予不同數量的比例。SDD在中間幾個feature map都給了6種比例來辨識，就是因為對於一般的物體在影像中的占比會是以中間這三層的尺度最為多數。
 
 ### Detector  
+取出了feature map之後，SSD會讓它先通過一次3x3的convolution來得到真正用來作為detector的神經層。而convolution的深度就是和剛剛default box有關。若假定default box數量是D，而目標類別有C個類別，邊界框有4個值，所以深度的計算就是等於Dx(4+C)。  
+
+![](/assets/images/SSD_paper02.png)
+
+我們可以將這個map在深度上Dx(4+C)，拆成邊界框的定位(localization)和分類(Classification)，如下圖所示。SSD透過localization來調整
+
+![](/assets/images/SSD_detector.png)
+{: .full}  
+
+
+
+
+
+
+
+
 
 ### Training   
 
