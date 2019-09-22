@@ -18,8 +18,10 @@ toc_label: "Outline"
 
 
 ## 演算法架構  
-作為one-stage模型，SSD以VGG-16為整個模型的主幹，在不同尺度的feature maps下進行辨識的工作，這樣的機制被稱為pyramidal feature hierarchy。整個網路架構如下圖所示
-![SSD stucture](/assets/images/SSD_structure.png)
+作為one-stage模型，SSD以VGG-16為整個模型的主幹，在不同尺度的feature maps下進行辨識的工作，這樣的機制被稱為pyramidal feature hierarchy。整個網路架構如下圖所示  
+
+![SSD stucture](/assets/images/SSD_structure_01.png)
+{: .full}  
 *SSD overview*  
 {: .text-center}  
 
