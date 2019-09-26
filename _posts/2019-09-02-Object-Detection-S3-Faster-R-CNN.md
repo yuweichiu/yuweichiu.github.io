@@ -14,7 +14,7 @@ toc_label: "Outline"
 ---
 
 ## 前言  
-前一篇我們提到了Fast R-CNN的改進，包括了減少冗贅的特徵提取動作，將ROI映射到feature maps上，並用ROI pooling 統一維度等等。但是為了迎來更快的偵測速度，在Proposals上的處理也需要納入整個模式的NN之中，一起用convoultion來解決。  
+前一篇我們提到了Fast R-CNN的改進，包括了減少冗贅的特徵提取動作，將ROI映射到feature maps上，並用ROI pooling 統一維度等等。但是為了迎來更快的偵測速度，在Proposals上的處理也需要納入整個模式的NN之中，一起用convolution來解決。  
 於是Faster R-CNN就此成型，它運用Region Proposals Network (RPN)搭配anchor box的設計，如同它論文的標題一樣 "Towards Real-Time Object Detection"，偵測速度來到了0.2s/image(相當於fps=5)的速度，雖然還不足以稱為real time，但是確實往這條路邁進了一大步。  
 
 論文：  
