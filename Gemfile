@@ -11,6 +11,9 @@ source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
 
+# For windows, enable this term:
+gem 'tzinfo-data'
+
 # To upgrade, run `bundle update`.
 
 # gem "jekyll"
