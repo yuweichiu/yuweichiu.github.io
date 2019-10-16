@@ -13,7 +13,7 @@ toc_label: "Outline"
 
 ## 前言
 拖了很久才繼續產出新的介紹文分享給大家。這次要來說說物件辨識發展的過程中也佔有一席之地的Semantic Segmentation是什麼，以及這其中代表的方法—Fully Convolutional Networks (FCN)是怎麼透過全卷積的網路來實現這個目標的。  
-論文：
+論文：  
 [Fully convolutional networks for semantic segmentation](https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Long_Fully_Convolutional_Networks_2015_CVPR_paper.html)
 
 ## 何謂Semantic Segmentation
