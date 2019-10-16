@@ -1,5 +1,5 @@
 ---
-title: "[Object Detection] S1: R-CNN 簡介"
+title: "[物件偵測] S1: R-CNN 簡介"
 header:
   teaser: /assets/images/rcnn_paper01.png
 categories:

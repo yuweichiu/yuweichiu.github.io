@@ -1,7 +1,7 @@
 ---
-title: "[Object Detection] S6: SSD 簡介"
+title: "[物件偵測] S6: SSD 簡介"
 header:
-  teaser: /assets/images/.png
+  teaser: /assets/images/SSD_structure_01.png
 categories:
   - object detection
   - deep learning

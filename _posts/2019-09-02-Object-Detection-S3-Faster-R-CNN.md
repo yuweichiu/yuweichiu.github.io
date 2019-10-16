@@ -1,5 +1,5 @@
 ---
-title: "[Object Detection] S3: Faster R-CNN 簡介"
+title: "[物件偵測] S3: Faster R-CNN 簡介"
 header:
   teaser: /assets/images/Faster_rcnn_structure.png
 categories:
