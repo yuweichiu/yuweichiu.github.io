@@ -15,7 +15,7 @@ toc_label: "Outline"
 拖了很久才繼續產出新的介紹文分享給大家。這次要來說說物件辨識發展的過程中也佔有一席之地的Semantic Segmentation是什麼，以及這其中代表的方法—Fully Convolutional Networks (FCN)是怎麼透過全卷積的網路來實現這個目標的。  
 
 ## 何謂Semantic Segmentation
-以物件偵測的發展目標來看，我們可以知道有大概幾種演進目標。  
+以物件偵測的發展目標來看，我們可以知道有大概幾種演進目標：  
 
 ![](/assets/images/FCN_01.jpg)
 
@@ -52,8 +52,8 @@ toc_label: "Outline"
 
 Fig-03這張圖是一般卷積和反卷積的示意圖。反卷積，顧名思義是要將卷積的結果反轉回來，但是其實反卷積做的事情跟卷積運算方法是一模一樣的！怎麼說一樣的呢？下面這張圖(Fig-04)我認為很好地說明了反卷積的運作。你可以看到反卷積基本上就是利用padding的方式擴大要反卷積的影像，然後一樣用卷積核做卷積來放大影像。而反卷積中的卷積核當然是待訓練的項，在初始化階段，會先以雙線性內插(Bilinear interpolation)初始化放大後的影像，再讓網路去修正卷積權重。  
 
-[![](/assets/images/FCN_05.gif)](https://medium.com/apache-mxnet/transposed-convolutions-explained-with-ms-excel-52d13030c7e8)  
-*Fig-04*  
+![](/assets/images/FCN_05.gif)
+*Fig-04. Quoted from [here](https://medium.com/apache-mxnet/transposed-convolutions-explained-with-ms-excel-52d13030c7e8).*  
 {: .text-center}
 
 而在順向的卷積網路中，通常伴隨著許多階段的池化(pooling)將影像維度逐步縮小。然而現在FCN要將小尺寸的prediction map放大回來，如果直接從最小的prediction map放大回來，結果會是很差的(如Fig-05最左)。  
@@ -72,9 +72,8 @@ Fig-03這張圖是一般卷積和反卷積的示意圖。反卷積，顧名思�
 ### Semantic Segmentation 
 這個prediction map裏頭究竟是什麼呢？我們看下面Fig-07這張圖，若它經過了FCN的處裡得到的prediction map，就如同右邊那張以數字和顏色對應類別的圖。  
 
-[![](/assets/images/FCN_08.png)](https://www.jeremyjordan.me/semantic-segmentation/
-)
-*Fig-07*  
+![](/assets/images/FCN_08.png)
+*Fig-07. Quoted from [here](https://www.jeremyjordan.me/semantic-segmentation/).*  
 {: .text-center}
 
 那我們把每一個channel都拆開來看，就會發現。FCN計算各個像素的類別分類的softmax機率後，會取channel-wise的最大機率，將最大機率所在的channel作為該位置像素所屬的類別，而以該類別的顏色呈現。這就是影像的semantic segmentation在做的事情。  
@@ -86,4 +85,7 @@ Fig-03這張圖是一般卷積和反卷積的示意圖。反卷積，顧名思�
 
 
 ## 結語：
-到這邊我們大致上了解了object detection的歷來的幾個發展方向，也知道影像中的semantic segmentation目前的主流方法FCN是如何進行的。當然它的缺點就是無法將同一類別的個體分割，這在實際應用上就造成了不小的麻煩，也因此有人認為這是一個不好的方向。但它終究是為Instance segmentation的發展有重要的貢獻。
+到這邊我們大致上了解了object detection的歷來的幾個發展方向，也知道影像中的semantic segmentation目前的主流方法FCN是如何進行的。當然它的缺點就是無法將同一類別的個體分割，這在實際應用上就造成了不小的麻煩，也因此有人認為這是一個不好的方向。但它終究是為Instance segmentation的發展有重要的貢獻。  
+這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出  
+如果喜歡這篇文章，記得在下面幫我按個Recommend↓  
+謝謝～
