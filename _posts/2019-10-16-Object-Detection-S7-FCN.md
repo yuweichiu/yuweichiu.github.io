@@ -5,9 +5,9 @@ header:
 categories:
   - object detection
   - deep learning
-  - semantic segmentation
 tags:
   - FCN
+  - Semantic Segmentation
 toc_label: "Outline"
 ---
 
