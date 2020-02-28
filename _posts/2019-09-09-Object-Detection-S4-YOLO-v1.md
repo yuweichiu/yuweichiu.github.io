@@ -7,6 +7,7 @@ categories:
   - deep learning
 tags:
   - YOLO
+  - darknet
 toc_label: "Outline"
 ---
 

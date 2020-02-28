@@ -14,7 +14,11 @@ toc_label: "Outline"
 ---
 
 ## 前言
-物件辨識發展到現在，透過我們前面所介紹的這些方法，總算是產生了一個集大成的模型－Mask R-CNN。他集結了Faster R-CNN的two-stage模型，再加上FPN的方法利用不同維度下特徵層級高的feature maps來進行預測，也改良Faster R-CNN中ROI Pooling的缺點，使其邊界框和物體定位的經度可以真正達到像素等級，將準確率提昇10~50%之間。對於物體定位精度的提升，讓含括FCN的概念的Mask R-CNN，可以對物體實現效果非常好的instance segmentation。
+物件辨識發展到現在，透過我們前面所介紹的這些方法，總算是產生了一個集大成的模型－Mask R-CNN。他集結了Faster R-CNN的two-stage模型，再加上FPN的方法利用不同維度下特徵層級高的feature maps來進行預測，也改良Faster R-CNN中ROI Pooling的缺點，使其邊界框和物體定位的經度可以真正達到像素等級，將準確率提昇10~50%之間。對於物體定位精度的提升，讓含括FCN的概念的Mask R-CNN，可以對物體實現效果非常好的instance segmentation。  
+
+論文：
+[Mask R-CNN](https://arxiv.org/abs/1703.06870)
+
 
 ## 演算法架構
 ![](/assets/images/mask_rcnn_01.png)
