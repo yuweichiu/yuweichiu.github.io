@@ -1,7 +1,7 @@
 ---
-title: "[Object Detection] S5: YOLO v2 簡介"
+title: "[物件偵測] S5: YOLO v2 簡介"
 header:
-  teaser: /assets/images/.png
+  teaser: /assets/images/yolov2_anchor.png
 categories:
   - object detection
   - deep learning
@@ -64,18 +64,3 @@ YOLO v1 用非常直覺的方式設計了網路的運作，讓網路從輸出到
 這是我個人對這篇論文的消化，如果有錯誤之處，請各位朋友指教或幫我指出  
 如果喜歡這篇文章，記得在下面幫我按個Recommend↓  
 謝謝～
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
