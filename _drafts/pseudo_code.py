@@ -73,12 +73,12 @@ for gi, gp in enumerate(GP_TOTAL):
     # do as adi ...
 
     # merging ADI to AEI
+    # ...
+    merge_AEI_ADI = pd.merge(AEI, ADI, on="")
+    align_ADI_2_AEI_collector.append(merge_AEI_ADI)
 
-    # mergin with coaterdf under same stage
-
-    # 
-
-
-
-
-
+    # merging with coaterdf under same stage
+    # ...
+    merge_coater = pd.merge(merge_AEI_ADI, cot_ope)
+    align_ADI_2_AEI_collector.append(merge_coater)
+    
