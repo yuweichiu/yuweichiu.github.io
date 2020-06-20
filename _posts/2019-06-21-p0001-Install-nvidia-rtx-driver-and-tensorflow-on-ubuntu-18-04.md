@@ -12,6 +12,7 @@ tags:
   - ubuntu
   - python
 toc_label: "Outline"
+toc_sticky: true
 ---
 
 > 爬了一堆文，每一篇都有收穫！但是我實際用全新的Ubuntu 18.04，照著reference的文章來試試看時，卻還是不斷踩坑QQ。還好不斷努力之下終於試出一整套完整流程可以把這些事完成，在這邊做個紀錄！

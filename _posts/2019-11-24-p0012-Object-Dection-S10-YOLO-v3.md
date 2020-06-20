@@ -1,7 +1,7 @@
 ---
 title: "[物件偵測] S10: YOLO v3 簡介"
 header:
-  teaser: /assets/images/p0012/yolov3_anchor.png
+  teaser: /assets/images/p0012/yolov3_01.png
 categories:
   - Deep Learning
 tags:
@@ -12,6 +12,7 @@ tags:
   - FCN
   - FPN
 toc_label: "Outline"
+toc_sticky: true
 ---
 
 ## 前言

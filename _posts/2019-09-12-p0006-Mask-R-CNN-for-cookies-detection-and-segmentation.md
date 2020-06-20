@@ -10,6 +10,7 @@ tags:
 toc_label: "Outline"
 header:
   teaser: /assets/images/p0006/detect_10509506623156.jpg
+toc_sticky: true
 ---
 > 這篇是對 Mask R-CNN 的應用—餅乾辨識器，辨識樂事和多利多滋兩種餅乾的包裝。因為還沒時間換成中文，就直接貼 [github](https://github.com/yuweichiu/Cookies-Detections-Mask-R-CNN) 的 README.md 過來先頂一下。  
 

@@ -11,6 +11,7 @@ tags:
   - batch normalization
   - VGG
 toc_label: "Outline"
+toc_sticky: true
 ---
 
 ## 前言

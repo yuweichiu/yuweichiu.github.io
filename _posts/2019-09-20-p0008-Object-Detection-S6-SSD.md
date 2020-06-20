@@ -9,6 +9,7 @@ tags:
   - SSD
   - default box
 toc_label: "Outline"
+toc_sticky: true
 ---
 
 ## 前言
