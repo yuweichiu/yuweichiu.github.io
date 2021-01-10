@@ -1,0 +1,5 @@
+# Statistic Process Control (SPC) chart plotter
+> 統計製程管制圖繪製工具
+
+我的工作常需要在公司內部的系統看各項製程的SPC chart，而最近重要的貨從上頭壓下來，所以各級老闆對SPC chart的審查更加勤(機)勞(車)。
+所以在把日常業務自動化的同時，也做了一個可以繪出精美SPC chart的
