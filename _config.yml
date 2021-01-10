@@ -265,11 +265,21 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -312,3 +322,27 @@ defaults:
       related: true
       toc: true
       mathjax: true
+      show_date: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # taxonomy
+  - scope:
+      path: ""
+      type: tag
+    values:
+      comments: false
+      author_profile: true
+      show_date: true
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
+      author_profile: true
+      show_date: true
