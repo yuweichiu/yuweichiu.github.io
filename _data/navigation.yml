@@ -1,13 +1,21 @@
 # main links
 main:
+  # - title: "Posts"
+  #   url: /year-archive/
+  # - title: "Category"
+  #   url: /categories/
+  - title: "碼農筆記"
+    url: /categories/coding-notes
+  - title: "人學機器學習"
+    url: /categories/learn-deep-learning
+  - title: "攝影手札"
+    url: /categories/photo-notes
+  # - title: "碼農記事"
+  #   url: /coding-notes/
   # - title: "Portfolio"
   #   url: /portfolio/
   - title: "About"
     url: /about/
-  - title: "Posts"
-    url: /year-archive/
-  - title: "Category"
-    url: /categories/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Posts"
