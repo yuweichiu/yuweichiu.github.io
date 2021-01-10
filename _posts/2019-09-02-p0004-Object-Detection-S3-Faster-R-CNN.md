@@ -3,7 +3,7 @@ title: "[物件偵測] S3: Faster R-CNN 簡介"
 header:
   teaser: /assets/images/p0004/Faster_rcnn_structure.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - R-CNN

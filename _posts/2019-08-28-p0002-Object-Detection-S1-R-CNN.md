@@ -3,7 +3,7 @@ title: "[物件偵測] S1: R-CNN 簡介"
 header:
   teaser: /assets/images/p0002/rcnn_paper01.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - R-CNN

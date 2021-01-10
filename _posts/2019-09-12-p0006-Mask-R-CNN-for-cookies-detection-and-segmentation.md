@@ -1,7 +1,7 @@
 ---
 title: "Mask R-CNN for Cookies Detection and Segmentation"
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - mask

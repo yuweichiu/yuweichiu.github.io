@@ -3,7 +3,7 @@ title: "[物件偵測] S10: YOLO v3 簡介"
 header:
   teaser: /assets/images/p0012/yolov3_anchor.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - YOLO

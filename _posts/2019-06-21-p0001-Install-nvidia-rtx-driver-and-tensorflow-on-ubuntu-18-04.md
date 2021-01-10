@@ -3,7 +3,7 @@ title: "在Ubuntu 18.04 中安裝NVIDIA RTX系列顯示卡驅動程式與Tensorf
 header:
   teaser: /assets/images/2019-06-21 18-28-31 的螢幕擷圖.png
 categories:
-  - Tutorial
+  - 碼農筆記
 tags:
   - nVIDIA 
   - Tensorflow

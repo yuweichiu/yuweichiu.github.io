@@ -3,7 +3,7 @@ title: "[物件偵測] S4: YOLO v1 簡介"
 header:
   teaser: /assets/images/p0005/yolov1_detect.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - YOLO

@@ -3,7 +3,7 @@ title: "[物件偵測] S6: SSD 簡介"
 header:
   teaser: /assets/images/p0008/SSD_structure_01.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - SSD

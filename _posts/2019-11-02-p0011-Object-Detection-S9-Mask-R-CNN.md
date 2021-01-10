@@ -3,7 +3,7 @@ title: "[物件偵測] S9: Mask R-CNN 簡介"
 header:
   teaser: /assets/images/p0011/mask_rcnn_01.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - R-CNN

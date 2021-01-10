@@ -3,7 +3,7 @@ title: "[物件偵測] S2: Fast R-CNN 簡介"
 header:
   teaser: /assets/images/p0003/fast-r-cnn-structure.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - R-CNN

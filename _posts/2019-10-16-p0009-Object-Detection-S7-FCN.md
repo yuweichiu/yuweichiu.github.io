@@ -3,7 +3,7 @@ title: "[物件偵測] S7: FCN for Semantic Segmentation 簡介"
 header:
   teaser: /assets/images/p0009/FCN_07.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - FCN

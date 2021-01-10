@@ -3,7 +3,7 @@ title: "[物件偵測] S8: Feature Pyramid Networks 簡介"
 header:
   teaser: /assets/images/p0010/FPN_02and03.png
 categories:
-  - Deep Learning
+  - 人學機器學習
 tags:
   - object detection
   - Image Pyramid
