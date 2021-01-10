@@ -133,12 +133,12 @@ author:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   # url: "https://instagram.com/"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/ivanchiu202a89181/"
-    - label: "Medium"
-      icon: "fab fa-fw fa-medium"
-      url: "https://medium.com/@ywchiu84021121"
+    # - label: "LinkedIn"
+    #   icon: "fab fa-fw fa-linkedin"
+    #   url: "https://www.linkedin.com/in/ivanchiu202a89181/"
+    # - label: "Medium"
+    #   icon: "fab fa-fw fa-medium"
+    #   url: "https://medium.com/@ywchiu84021121"
 
 # Site Footer
 footer:
@@ -161,9 +161,9 @@ footer:
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
       # url:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/ivanchiu202a89181/"
+    # - label: "LinkedIn"
+    #   icon: "fab fa-fw fa-linkedin"
+    #   url: "https://www.linkedin.com/in/ivanchiu202a89181/"
 
 
 # Reading Files
