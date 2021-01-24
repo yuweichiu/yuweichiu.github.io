@@ -1,5 +1,5 @@
 ---
-title: "Posts by Tag (grid view)"
+title: "Posts by Tag"
 permalink: /tags-grid/
 layout: tags
 entries_layout: grid
